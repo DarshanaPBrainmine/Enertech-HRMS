@@ -1,4 +1,4 @@
-app_name = "enertech_hrms"
+clapp_name = "enertech_hrms"
 app_title = "Enertech HRMS"
 app_publisher = "shrey"
 app_description = "Enertech HRMS"
@@ -246,4 +246,3 @@ app_license = "mit"
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
-

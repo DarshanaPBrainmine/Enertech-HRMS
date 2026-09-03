@@ -1,0 +1,174 @@
+{
+ "charts": [
+  {
+   "chart_name": "My Salary Trend",
+   "label": "My Salary Trend"
+  }
+ ],
+ "content": "[{\"id\":\"NCd8I05MaX\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Updates</b></span>\",\"col\":12}},{\"id\":\"mwePSGBEgb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Daily Update\",\"col\":3}},{\"id\":\"qtlraNfcAE\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Employee Details</b></span>\",\"col\":12}},{\"id\":\"AVvXzq0S7A\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee\",\"col\":6}},{\"id\":\"4zoZBCr9pd\",\"type\":\"header\",\"data\":{\"text\":\"My Attendance Summary\",\"col\":12}},{\"id\":\"4r9w4s9jEe\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total  Absent  this month \",\"col\":3}},{\"id\":\"0H_bVQgxv-\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Half Day This Month\",\"col\":3}},{\"id\":\"gQBd-6AaMV\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Present this month\",\"col\":3}},{\"id\":\"VIfLLr2OWI\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total WFH This Month\",\"col\":3}},{\"id\":\"yTPFnhDASM\",\"type\":\"chart\",\"data\":{\"chart_name\":\"My Salary Trend\",\"col\":12}},{\"id\":\"A1cUGf2Sik\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Attendance</b></span>\",\"col\":12}},{\"id\":\"MJF0cqtVBT\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Checkin\",\"col\":4}},{\"id\":\"eJIhDKJYo7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Attendance\",\"col\":4}},{\"id\":\"cx7oCy_Y1W\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Work From Home Attendance\",\"col\":4}},{\"id\":\"22GxvPrvEU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Work From Home Request\",\"col\":4}},{\"id\":\"JrXzJqQBjk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Client Side Visit Report\",\"col\":4}},{\"id\":\"QghDu6y7wP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Missed Punch Out Request\",\"col\":3}},{\"id\":\"Kx--0b2ct1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Service Engineer Attendence\",\"col\":6}},{\"id\":\"l__h42EcyR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Client Side Attendance\",\"col\":6}},{\"id\":\"WtjNG0M-PO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Leaves</b></span>\",\"col\":12}},{\"id\":\"F-PT5HfBUm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Application\",\"col\":4}},{\"id\":\"ofJH2WkOhE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Holiday List\",\"col\":3}},{\"id\":\"LufZxD-ZXs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Compensatory Leave Request\",\"col\":4}},{\"id\":\"qeLaCunPeb\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Expence Claim &amp; Salary</b></span>\",\"col\":12}},{\"id\":\"uTUHn_FmEg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Salary Slip\",\"col\":4}},{\"id\":\"tAyiTz2TDP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Expense Claim\",\"col\":4}}]",
+ "creation": "2026-09-01 17:32:21.777489",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Employee dashboard 2",
+ "links": [],
+ "modified": "2026-09-01 17:34:03.352786",
+ "modified_by": "Administrator",
+ "module": "Enertech HRMS",
+ "name": "Employee dashboard 2",
+ "number_cards": [
+  {
+   "label": "Total  Absent  this month ",
+   "number_card_name": "Total  Absent  this month"
+  },
+  {
+   "label": "Total Half Day This Month",
+   "number_card_name": "Total Half Day This Month"
+  },
+  {
+   "label": "Total Present this month",
+   "number_card_name": "Total"
+  },
+  {
+   "label": "Total WFH This Month",
+   "number_card_name": "Total WFH This Month"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "sequence_id": 33.1,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Service Engineer Attendence",
+   "link_to": "Service Engineer Attendence",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Daily Update",
+   "link_to": "daily-update",
+   "type": "Page"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Holiday List",
+   "link_to": "Holiday List",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Compensatory Leave Request",
+   "link_to": "Compensatory Leave Request",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Missed Punch Out Request",
+   "link_to": "Missed Punch Out Request",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Expense Claim",
+   "link_to": "Expense Claim",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Client Side Attendance",
+   "link_to": "Client Side Attendance",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Leave Application",
+   "link_to": "Leave Application",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Checkin",
+   "link_to": "Employee Checkin",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Work From Home Request",
+   "link_to": "Work From Home Request",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Attendance",
+   "link_to": "Attendance",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Work From Home Attendance",
+   "link_to": "Work From Home Attendance",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee",
+   "link_to": "Employee",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Salary Slip",
+   "link_to": "Salary Slip",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Client Side Visit Report",
+   "link_to": "Client Side Visit Report",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Employee dashboard 2"
+}

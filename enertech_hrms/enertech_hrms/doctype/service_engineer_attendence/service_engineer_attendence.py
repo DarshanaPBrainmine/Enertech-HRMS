@@ -1,6 +1,8 @@
 import frappe
 from frappe.model.document import Document
 from frappe import _
+from frappe.utils import getdate
+from enertech_hrms.enertech_hrms.utils.attendance_sync import sync_attendance
 
 
 class ServiceEngineerAttendence(Document):
@@ -22,6 +24,7 @@ class ServiceEngineerAttendence(Document):
 
 	def on_submit(self):
 		self.push_to_employee_checkin()
+		sync_attendance(self.employee, getdate(self.timestamp))
 
 	def push_to_employee_checkin(self):
 		log_type = "IN" if self.checkin_type == "Check In" else "OUT"
