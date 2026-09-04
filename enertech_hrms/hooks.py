@@ -251,7 +251,7 @@ fixtures = [
     {
         "dt": "Workspace",
         "filters": [
-            ["module", "=", "HR"]
+            ["module", "=", "Enertech HRMS"]
         ]
     }
 ]
