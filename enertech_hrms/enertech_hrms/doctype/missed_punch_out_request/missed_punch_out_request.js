@@ -1,20 +1,20 @@
 frappe.ui.form.on("Missed Punch Out Request", {
 	onload(frm) {
 		if (frm.is_new() && !frm.doc.date) {
-			frm.set_value('date', frappe.datetime.get_today());
+			frm.set_value("date", frappe.datetime.get_today());
 		}
 	},
 
 	employee(frm) {
-		fetch_last_checkin(frm);
+		fetch_first_checkin(frm);
 	},
 
 	date(frm) {
-		fetch_last_checkin(frm);
+		fetch_first_checkin(frm);
 	}
 });
 
-function fetch_last_checkin(frm) {
+function fetch_first_checkin(frm) {
 	if (!frm.doc.employee || !frm.doc.date) return;
 
 	frappe.call({
@@ -26,14 +26,14 @@ function fetch_last_checkin(frm) {
 				time: ["between", [`${frm.doc.date} 00:00:00`, `${frm.doc.date} 23:59:59`]]
 			},
 			fields: ["time", "log_type"],
-			order_by: "time desc",
+			order_by: "time asc", // first check-in of the day
 			limit_page_length: 1
 		},
-		callback: function(r) {
+		callback: function (r) {
 			if (r.message && r.message.length) {
-				frm.set_value('checkin_time', r.message[0].time);
+				frm.set_value("checkin_time", r.message[0].time);
 			} else {
-				frm.set_value('checkin_time', '');
+				frm.set_value("checkin_time", "");
 			}
 		}
 	});

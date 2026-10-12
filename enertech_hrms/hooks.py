@@ -1,4 +1,4 @@
-clapp_name = "enertech_hrms"
+app_name = "enertech_hrms"
 app_title = "Enertech HRMS"
 app_publisher = "shrey"
 app_description = "Enertech HRMS"
@@ -27,6 +27,7 @@ app_license = "mit"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/enertech_hrms/css/enertech_hrms.css"
 # app_include_js = "/assets/enertech_hrms/js/enertech_hrms.js"
+# app_include_js = ["/assets/enertech_hrms/js/location_tracker.js"]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/enertech_hrms/css/enertech_hrms.css"
@@ -47,6 +48,11 @@ app_license = "mit"
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+
+doctype_js = {
+    "Attendance": "public/js/attendance_location.js",
+    "Service Engineer Attendence": "public/js/attendance_location.js",
+}
 
 # Svg Icons
 # ------------------
