@@ -54,6 +54,9 @@ doctype_js = {
     "Service Engineer Attendence": "public/js/attendance_location.js",
 }
 
+doctype_list_js = {
+    "Attendance": "public/js/attendance_list.js",
+}
 # Svg Icons
 # ------------------
 # include app icons in desk
