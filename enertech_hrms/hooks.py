@@ -52,10 +52,13 @@ app_license = "mit"
 doctype_js = {
     "Attendance": "public/js/attendance_location.js",
     "Service Engineer Attendence": "public/js/attendance_location.js",
+    
 }
 
 doctype_list_js = {
     "Attendance": "public/js/attendance_list.js",
+    "Expense Claim": "public/js/expense_claim_list.js",
+
 }
 # Svg Icons
 # ------------------
@@ -257,6 +260,7 @@ doctype_list_js = {
 # ignore_translatable_strings_from = []
 
 fixtures = [
+    
     {
         "dt": "Workspace",
         "filters": [
