@@ -2,6 +2,9 @@
 
 Layout follows TravelClaimReport.xlsx: title row, green header row, one row per
 Expense Claim, one amount column per expense type, and "Open" hyperlinks.
+
+Download can be limited by company + dates, and optionally by selected voucher
+names (comma separated) and/or a single employee.
 """
 
 import html
@@ -254,20 +257,33 @@ def make_workbook(title, claims, details, branches, base_url):
 	return out.getvalue()
 
 
-def _get_claims(company, from_date, to_date):
+def _get_claims(company, from_date, to_date, names=None, employee=None):
 	fields = list(CLAIM_FIELDS)
 	meta = frappe.get_meta("Expense Claim")
 	for optional in ("workflow_state", "custom_description"):
 		if meta.has_field(optional):
 			fields.append(optional)
+
+	filters = {
+		"company": company,
+		"posting_date": ["between", [from_date, to_date]],
+		"docstatus": ["<", 2],
+	}
+
+	# vouchers selected in the list view (comma separated string or list)
+	if isinstance(names, str):
+		names = [n.strip() for n in names.split(",") if n.strip()]
+	if names:
+		filters["name"] = ["in", names]
+
+	# employee filter of the list view
+	if employee:
+		filters["employee"] = employee
+
 	# get_list applies the user's permissions, so people see only claims they may read
 	return frappe.get_list(
 		"Expense Claim",
-		filters={
-			"company": company,
-			"posting_date": ["between", [from_date, to_date]],
-			"docstatus": ["<", 2],
-		},
+		filters=filters,
 		fields=fields,
 		order_by="posting_date desc, name desc",
 		limit_page_length=0,
@@ -275,15 +291,15 @@ def _get_claims(company, from_date, to_date):
 
 
 @frappe.whitelist()
-def count_claims(company, from_date, to_date):
-	return len(_get_claims(company, from_date, to_date))
+def count_claims(company, from_date, to_date, names=None, employee=None):
+	return len(_get_claims(company, from_date, to_date, names, employee))
 
 
 @frappe.whitelist()
-def download(company, from_date, to_date):
-	claims = _get_claims(company, from_date, to_date)
+def download(company, from_date, to_date, names=None, employee=None):
+	claims = _get_claims(company, from_date, to_date, names, employee)
 	if not claims:
-		frappe.throw(_("No claims found for the selected dates."))
+		frappe.throw(_("No claims found for the selected filters."))
 
 	details = frappe.get_all(
 		"Expense Claim Detail",
