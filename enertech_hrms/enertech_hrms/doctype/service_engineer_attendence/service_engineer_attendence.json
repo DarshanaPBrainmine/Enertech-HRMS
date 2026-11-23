@@ -19,7 +19,8 @@
   "column_break_eptq",
   "location_address",
   "amended_from",
-  "comment_box"
+  "comment_box",
+  "sync_status"
  ],
  "fields": [
   {
@@ -109,13 +110,20 @@
    "fieldname": "comment_box",
    "fieldtype": "Small Text",
    "label": "Comment Box"
+  },
+  {
+   "fieldname": "sync_status",
+   "fieldtype": "Data",
+   "label": "Sync Status",
+   "no_copy": 1,
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-10-10 18:09:24.608261",
+ "modified": "2026-11-23 12:50:00.000000",
  "modified_by": "Administrator",
  "module": "Enertech HRMS",
  "name": "Service Engineer Attendence",
