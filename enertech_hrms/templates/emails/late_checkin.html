@@ -1,0 +1,18 @@
+<div style="font-family: Arial, sans-serif; font-size: 14px; color: #333; line-height: 1.6;">
+    <p><b>Late Check-In Reminder</b></p>
+
+    <p>Dear {{ employee_name }},</p>
+
+    <p>We noticed that your check-in today was at <b>{{ checkin_time }}</b>, which is after your shift start time of <b>{{ expected_checkin }}</b>. This is your <b>late check-in {{ late_count }} of {{ late_limit - 1 }}</b> allowed this month. We understand that occasional delays can happen, and this reminder is simply to help you stay aligned with the attendance policy and avoid any unnecessary attendance concerns or salary deductions.</p>
+
+    <p>As per company policy, {{ late_limit }} late check-ins in a month may result in a half-day salary deduction.</p>
+
+    <p>Please take care of your check-in timings going forward. We genuinely want to ensure that you do not face any avoidable deductions or attendance-related issues.</p>
+
+    <p>Thank you for your understanding, cooperation, and continued support.</p>
+
+    <br>
+    <p>Thanks &amp; Regards,<br>
+    HR Team<br>
+    Enertech</p>
+</div>
